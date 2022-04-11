@@ -34,7 +34,7 @@
 #define LPP_PERCENTAGE 120          // 1 byte 1-100% unsigned
 #define LPP_ALTITUDE 121            // 2 byte 1m signed
 #define LPP_CONCENTRATION 125       // 2 bytes, 1 ppm unsigned
-#define LPP_POWER 128               // 2 byte, 1W, unsigned
+#define LPP_POWER 128               // 2 byte, 0.001W, unsigned
 #define LPP_DISTANCE 130            // 4 byte, 0.001m, unsigned
 #define LPP_ENERGY 131              // 4 byte, 0.001kWh, unsigned
 #define LPP_DIRECTION 132           // 2 bytes, 1deg, unsigned
@@ -190,7 +190,7 @@ public:
   uint8_t addAltitude(uint8_t channel, float value);
 #endif
 #ifndef CAYENNE_DISABLE_POWER
-  uint8_t addPower(uint8_t channel, uint32_t value);
+  uint8_t addPower(uint8_t channel, float value);
 #endif
 #ifndef CAYENNE_DISABLE_DISTANCE
   uint8_t addDistance(uint8_t channel, float value);
